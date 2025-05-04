@@ -1,8 +1,8 @@
+
 # HealthTrack - Vital Signs Monitoring
 
 **HealthTrack** is a full-stack application designed to help users monitor their vital signs such as blood pressure, heart rate, and glucose levels. The app allows users to log measurements, visualize trends with charts, and receive alerts when values exceed normal thresholds.
-![alt text]([http://url/to/img.png](https://github.com/MatteoRossato/BioMed_PROJECT-----HealthTracker/blob/main/HealthTrackPro/generated-icon.png
-))
+
 ---
 
 ## 🏠 HealthTrack Dashboard
@@ -206,3 +206,5 @@ npm run dev
 ---
 
 **© 2025 HealthTrack | Built with ❤️ for your well-being**
+
+---
