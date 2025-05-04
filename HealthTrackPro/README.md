@@ -1,101 +1,108 @@
-# HealthTrack - Monitoraggio dei Parametri Vitali
+# HealthTrack - Vital Signs Monitoring
 
-HealthTrack è un'applicazione full-stack progettata per aiutare gli utenti a monitorare i propri parametri vitali come pressione sanguigna, frequenza cardiaca e livelli di glucosio. L'applicazione consente di registrare le misurazioni, visualizzare grafici di tendenza e ricevere avvisi quando i valori superano le soglie normali.
+**HealthTrack** is a full-stack application designed to help users monitor their vital signs such as blood pressure, heart rate, and glucose levels. The app allows users to log measurements, visualize trends with charts, and receive alerts when values exceed normal thresholds.
 
-![HealthTrack Dashboard](https://via.placeholder.com/800x450.png?text=HealthTrack+Dashboard)
+---
 
-## Caratteristiche Principali
+## 🏠 HealthTrack Dashboard
 
-- **Autenticazione Utente**: Sistema completo di registrazione e login con JWT per la sicurezza
-- **Monitoraggio Parametri Vitali**: Registrazione di pressione sanguigna (sistolica/diastolica), frequenza cardiaca e livelli di glucosio
-- **Visualizzazione Dati**: Grafici interattivi per monitorare i trend nel tempo
-- **Sistema di Avvisi**: Notifiche automatiche quando i valori superano le soglie di sicurezza
-- **Filtri per Date**: Possibilità di filtrare i dati per intervalli di date
-- **Interfaccia Responsive**: Design ottimizzato per dispositivi mobili e desktop
+### 🔑 Key Features
 
-## Stack Tecnologico
+* **User Authentication**: Complete registration and login system using JWT for security
+* **Vital Sign Monitoring**: Track systolic/diastolic blood pressure, heart rate (BPM), and glucose levels (mg/dL)
+* **Data Visualization**: Interactive charts to track trends over time
+* **Alert System**: Automatic notifications when values exceed safety thresholds
+* **Date Filters**: Filter data by date ranges
+* **Responsive Interface**: Optimized design for mobile and desktop devices
 
-### Frontend
-- **React**: Libreria JavaScript per costruire l'interfaccia utente
-- **Tailwind CSS & shadcn/ui**: Framework CSS per lo styling e componenti UI
-- **Chart.js**: Libreria per la creazione di grafici interattivi
-- **React Query**: Gestione dello stato server e delle richieste API
-- **Zod**: Validazione dei dati lato client
+---
 
-### Backend
-- **Node.js & Express**: Server backend
-- **PostgreSQL**: Database relazionale per la persistenza dei dati
-- **Drizzle ORM**: ORM per l'interazione con il database
-- **JWT**: Autenticazione basata su token
-- **Passport.js**: Middleware di autenticazione
+## ⚙️ Tech Stack
 
-## Architettura dell'Applicazione
+### 🖥️ Frontend
 
-L'applicazione è strutturata secondo un'architettura client-server moderna:
+* **React**: JavaScript library for building the UI
+* **Tailwind CSS & shadcn/ui**: CSS framework and UI components
+* **Chart.js**: Charting library for visual data representation
+* **React Query**: State management and API request handling
+* **Zod**: Schema-based form validation
+
+### 🛠️ Backend
+
+* **Node.js & Express**: Backend server
+* **PostgreSQL**: Relational database for persistent storage
+* **Drizzle ORM**: ORM for database interaction
+* **JWT**: Token-based authentication
+* **Passport.js**: Authentication middleware
+
+---
+
+## 🧱 Application Architecture
 
 ```
 /
-├── client/                # Frontend React
+├── client/                # React frontend
 │   ├── src/
-│   │   ├── components/    # Componenti UI riutilizzabili
+│   │   ├── components/    # Reusable UI components
 │   │   ├── hooks/         # Custom React hooks
-│   │   ├── lib/           # Utility e configurazioni
-│   │   ├── pages/         # Pagine dell'applicazione
-│   │   └── ...
-├── db/                    # Configurazione del database
-├── server/                # Backend Express
-│   ├── auth.ts            # Logica di autenticazione
-│   ├── routes.ts          # Definizione delle rotte API
-│   ├── storage.ts         # Accesso al database
-│   └── ...
-└── shared/                # Codice condiviso tra client e server
-    └── schema.ts          # Schema del database e validazione
+│   │   ├── lib/           # Utilities and config
+│   │   ├── pages/         # Application pages
+├── db/                    # Database configuration
+├── server/                # Express backend
+│   ├── auth.ts            # Authentication logic
+│   ├── routes.ts          # API route definitions
+│   ├── storage.ts         # Database access
+└── shared/                # Shared client-server code
+    └── schema.ts          # DB schema and validation
 ```
 
-## Entità di Dati
+---
 
-### Utenti
-Gli utenti possono registrarsi, effettuare il login e gestire i propri dati sanitari.
+## 🧬 Data Entities
 
-### Parametri Sanitari
-Le principali entità di dati includono:
-- **Pressione Sanguigna**: Sistolica e diastolica (mmHg)
-- **Frequenza Cardiaca**: Battiti al minuto (BPM)
-- **Livelli di Glucosio**: mg/dL
+### 👤 Users
 
-## Funzionalità Principali
+Users can register, log in, and manage their health data.
 
-### Schermata di Login/Registrazione
-La schermata di autenticazione permette agli utenti di creare un nuovo account o accedere con le proprie credenziali.
+### 📊 Health Parameters
 
-![Schermata di Login](https://via.placeholder.com/800x450.png?text=Login+Screen)
+* **Blood Pressure**: Systolic and diastolic (mmHg)
+* **Heart Rate**: Beats per minute (BPM)
+* **Glucose Level**: mg/dL
 
-### Dashboard
-La dashboard principale mostra:
-- Card per ogni tipo di parametro vitale
-- Grafici di tendenza per ciascun parametro
-- Valori più recenti con indicazione visiva (verde, giallo, rosso) in base ai valori normali
-- Filtri per la visualizzazione dei dati per intervallo di date
+---
 
-![Dashboard](https://via.placeholder.com/800x450.png?text=Dashboard+View)
+## 💡 Main Features
 
-### Inserimento Dati
-Gli utenti possono aggiungere nuove misurazioni tramite moduli dedicati:
+### 🔐 Login/Register Screen
 
-![Inserimento Dati](https://via.placeholder.com/800x450.png?text=Data+Entry+Form)
+Allows users to create an account or log in securely.
 
-### Grafici di Tendenza
-I grafici mostrano l'andamento dei parametri nel tempo, con linee di soglia per i valori normali:
+### 📈 Dashboard
 
-![Grafici di Tendenza](https://via.placeholder.com/800x450.png?text=Trend+Charts)
+Displays:
 
-## Implementazione Tecnica
+* Cards for each type of vital sign
+* Trend charts for each parameter
+* Latest values with color-coded status (green/yellow/red)
+* Filters by date range
 
-### Database Schema
-L'applicazione utilizza PostgreSQL con Drizzle ORM e il seguente schema:
+### ➕ Data Entry
 
-```typescript
-// Tabella utenti
+Users can input new measurements via dedicated forms.
+
+### 📉 Trend Charts
+
+Charts display parameter trends over time, with threshold lines for normal values.
+
+---
+
+## 🔧 Technical Implementation
+
+### 🗄️ Database Schema (PostgreSQL + Drizzle ORM)
+
+```ts
+// Users table
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
   username: text('username').notNull(),
@@ -104,7 +111,7 @@ export const users = pgTable('users', {
   createdAt: timestamp('created_at').defaultNow().notNull()
 });
 
-// Tabella dei dati sanitari
+// Health data table
 export const healthData = pgTable('health_data', {
   id: serial('id').primaryKey(),
   userId: integer('user_id').references(() => users.id).notNull(),
@@ -115,27 +122,28 @@ export const healthData = pgTable('health_data', {
 });
 ```
 
-### Autenticazione
-L'autenticazione utilizza JWT (JSON Web Tokens):
+### 🔐 Authentication with JWT
 
-```typescript
+```ts
 export const generateToken = (userId: number): string => {
   const secret = process.env.JWT_SECRET || 'default_secret_key';
   return jwt.sign({ userId }, secret, { expiresIn: '7d' });
 };
 ```
 
-### API REST
-Le principali API esposte includono:
+---
 
-- `POST /api/auth/register`: Registrazione utente
-- `POST /api/auth/login`: Login utente
-- `GET /api/healthdata`: Recupero dei dati sanitari filtrabili
-- `POST /api/healthdata`: Inserimento nuovi dati sanitari
-- `GET /api/healthdata/latest`: Recupero degli ultimi valori registrati
+## 🧩 API Endpoints
 
-### Visualizzazione Dati
-I grafici sono implementati con Chart.js e React:
+* `POST /api/auth/register`: Register new user
+* `POST /api/auth/login`: User login
+* `GET /api/healthdata`: Retrieve health data (with filters)
+* `POST /api/healthdata`: Add new health measurement
+* `GET /api/healthdata/latest`: Get latest recorded values
+
+---
+
+## 📊 Data Visualization with Chart.js
 
 ```tsx
 <HealthChart 
@@ -152,47 +160,48 @@ I grafici sono implementati con Chart.js e React:
 />
 ```
 
-## Come Iniziare
+---
 
-### Prerequisiti
-- Node.js
-- PostgreSQL
+## 🚀 Getting Started
 
-### Installazione
+### Prerequisites
 
-1. Clona il repository
+* Node.js
+* PostgreSQL
+
+### Installation
+
 ```bash
-git clone https://github.com/tuonome/healthtrack.git
+git clone https://github.com/yourusername/healthtrack.git
 cd healthtrack
-```
-
-2. Installa le dipendenze
-```bash
 npm install
 ```
 
-3. Configura il database
+### Database Setup
+
 ```bash
-npm run db:push  # Applica lo schema al database
-npm run db:seed  # Popola il database con dati di esempio
+npm run db:push     # Apply schema to DB
+npm run db:seed     # Seed with example data
 ```
 
-4. Avvia l'applicazione
+### Start the App
+
 ```bash
 npm run dev
 ```
 
-5. Accedi all'applicazione
-```
-URL: http://localhost:5000
-Utente di prova: test@example.com
-Password: password123
-```
+### Access the App
 
-## Conclusioni
-
-HealthTrack è un'applicazione completa per il monitoraggio dei parametri vitali, realizzata con tecnologie moderne e un'architettura scalabile. L'interfaccia utente intuitiva e le funzionalità di visualizzazione dei dati la rendono uno strumento efficace per tenere sotto controllo la propria salute.
+* URL: `http://localhost:5000`
+* Test user: `test@example.com`
+* Password: `password123`
 
 ---
 
-© 2025 HealthTrack | Sviluppato con ❤️ per la tua salute
+## ✅ Conclusion
+
+**HealthTrack** is a complete health monitoring tool built with a modern tech stack and scalable architecture. Its intuitive interface and robust features make it a powerful solution for staying on top of your health.
+
+---
+
+**© 2025 HealthTrack | Built with ❤️ for your well-being**
